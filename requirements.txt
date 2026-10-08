@@ -1,0 +1,8 @@
+flask
+httpx
+requests
+pycryptodome
+google-play-scraper
+protobuf
+protobuf-decoder
+mg24-proto

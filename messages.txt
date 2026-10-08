@@ -1,0 +1,3 @@
+# line = ek guild message
+[00FF00]Hello Everyone!
+[FFFF00]Welcome!

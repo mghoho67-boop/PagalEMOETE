@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ff-api-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python api_bot.py
+    envVars:
+      - key: FF_UID
+        sync: false
+      - key: FF_PASSWORD
+        sync: false
+      - key: API_KEY
+        sync: false
