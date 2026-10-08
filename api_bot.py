@@ -155,11 +155,6 @@ def _invite_route(size):
     return jsonify({"status": "success", "target_uid": int(u), "message": f"{size}-Player Invite Sent!"})
 
 
-@app.route("/")
-def health():
-    return jsonify({"status": "ok", "bot_ready": _ready()})
-
-
 @app.route("/3")
 def r3(): return _invite_route(3)
 
@@ -207,9 +202,7 @@ def run_flask():
 def main():
     global LOOP
     creds = bot.read_credentials() or {}
-    token = creds.get("access_token", "") or os.environ.get("FF_TOKEN", "")
-    uid = creds.get("uid", "") or os.environ.get("FF_UID", "")
-    pw = creds.get("password", "") or os.environ.get("FF_PASSWORD", "")
+    token, uid, pw = creds.get("access_token", ""), creds.get("uid", ""), creds.get("password", "")
     if not token and not (uid.isdigit() and pw):
         print("ckr.txt ma uid+password ya access_token rakhnus")
         return

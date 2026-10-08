@@ -12,10 +12,7 @@ from typing import Optional, Dict
 from google_play_scraper import app as play_scraper
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
-try:
-    import Online_pb2  # optional (ab use hudaina)
-except ImportError:
-    Online_pb2 = None
+import Online_pb2
 import os
 import re
 import ast
